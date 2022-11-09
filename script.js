@@ -138,7 +138,7 @@ function sendEmail(e) {
 			if (xhr.status === 200) {
 				document.getElementById("loader").innerHTML = xhr.responseText;
 			} else {
-				document.getElementById("loader").innerHTML = "Unexpected result: "+xhr.status;
+				document.getElementById("loader").innerHTML = "Unable to send: Error "+xhr.status;
 			}
 		}
 	}
