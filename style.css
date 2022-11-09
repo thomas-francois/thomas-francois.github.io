@@ -1,0 +1,463 @@
+*{
+	margin: 0;
+	padding: 0;
+	--black: #1a1325;
+	--teal: #37a3a4;
+	--red: #b73d39;
+	--cream: #f3ecd3;
+	--white: #f4f7fa;
+}
+
+
+body{
+/*	align-items: center;
+	justify-content: center;*/
+	display: flex;
+	background: var(--cream);
+	overflow-x: hidden;
+}
+
+
+.navBar{
+	position: fixed;
+	display: flex;
+	list-style-type: none;
+	width: 100%;
+	height: 75px;
+	user-select: none;
+	z-index: 10;
+}
+
+
+.navBar a{
+	position: relative;
+	top: 20%;
+	left: 10%;
+	margin-right: 5vw;
+	margin-left: 2vw;
+	text-decoration: none;
+	font: 2em "Avenir";
+	color: var(--cream);
+	transition: all 0.1s ease-in-out;
+}
+
+.navBar img{
+	position: relative;
+	left: 15%;
+	top: 10%;
+	margin-left: 5vw;
+	height: 80%; width: auto;
+	filter: invert(98%) sepia(7%) saturate(1154%) hue-rotate(322deg) brightness(102%) contrast(91%);
+	transition: all 0.1s ease-in-out;
+}
+
+.navBar a:hover,img:hover{
+	transform: scale(0.95);
+}
+
+.navBarBackground{
+	position: fixed;
+	display: flex;
+	list-style-type: none;
+	background-color: var(--black);
+	width: 100%;
+	height: 75px;
+	z-index: 10;
+	user-select: none;
+	z-index: 9;
+	opacity: 0;
+}
+
+
+.presentation{
+	position: absolute;
+	width: 100vw;
+    height: 100vh;
+    background-image: url("assets/StockPhoto2.jpeg");
+    background-position: center top;
+	background-size:cover;
+}
+
+
+.imageBackground{
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: auto;
+	justify-self: center;
+
+}
+
+.presentation h1{
+	position: absolute;
+	top: 24vh; left: 18vw;
+	font-family: "Lobster";
+	font-size: 4vw;
+	color: var(--white);
+	transition: 0.4s ease;
+}
+
+
+.presentation p{
+	position: absolute;
+	top: 35vh; left: 10vw;
+	font: 2.5vw "Avenir";
+	color: var(--white);
+	width: 50vw;
+}
+
+.presentation span{
+	color: var(--red);
+}
+
+
+.scrollIndicator{
+	position: relative;
+	top: 85vh;
+	left: 47.5vw;
+	border-left: 4px solid var(--white);
+	border-bottom: 4px solid var(--white);
+	width: 4vw; height: 4vw;
+	filter: drop-shadow(0px 0px 5px black);
+	transition: .5s ease-in-out;
+	animation: MoveUpDown 3s linear infinite;
+}
+
+
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(-45deg);
+  }
+}
+
+
+
+.photoContainer{
+	background-color: var(--black);
+	display: flex;
+	position: fixed;
+	top: 10vw; left: 10vw;
+	width: 50vw; height: 50vw;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+/*	visibility: hidden;
+*/}
+
+
+
+.photoCV{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	filter:  drop-shadow(0px 0px 20px black)
+
+}
+
+.nameCV{
+	position: relative;
+	font: 1.8em "Avenir";
+	color: var(--white);
+}
+
+.CVJump{
+	position: absolute;
+	top: 50.2vw;
+	width: 1vw;
+	visibility: hidden;
+}
+
+
+.CV{
+	position: absolute;
+	display: flex;
+
+	top: 110vh; left: 10%;
+	width: 80vw; height: 115vw;
+	border-radius: 50px;
+	background: var(--cream);
+	box-shadow:  -20px 20px 60px #cec8b3,
+	             20px -20px 60px #fffff3;
+	outline: solid 1px #cec8b3;
+	z-index: 1;
+}
+
+
+.Cards{
+	position: relative;
+	flex-direction: column;
+	left: 0;
+	top: calc(125vh + 115vw);;
+	width: 100%;
+	background: var(--teal);
+	padding-bottom: 50vh;
+	/*background: linear-gradient(to bottom, var(--cream) 0%,var(--red) 100%)*/
+
+
+}
+
+
+.projectCard{
+	position: relative;
+	top: 0vw; left: 20%;
+	width: 60vw; height: 40vw;
+	background-color: var(--black);
+	margin-top: 15vw;
+	border-radius: 5vw;
+	display: block;
+}
+
+
+
+.cardNum{
+	position: relative;
+	font: 10vw "LeagueSpartan";
+	color: var(--white);
+	bottom: 5vw;
+	left: 10vw;
+	filter: drop-shadow(0px 0px 20px black);
+	user-select: none;
+
+}
+
+
+.cardTitle{
+	font: 6vw "Avenir";
+	color: var(--white);
+	position: relative;
+	top: 20vw;
+	left: 3vw;
+	filter: drop-shadow(0px 0px 20px black);
+	user-select: none;
+	transition: 0.4s ease-in-out;
+}
+
+.cardSubtitle{
+	font: 2vw "Avenir";
+	color: var(--white);
+	position: relative;
+	top: 18vw;
+	left: 3vw;
+	filter: drop-shadow(0px 0px 20px black);
+	user-select: none;
+	transition: 0.4s ease-in-out;
+}
+
+
+
+.cardArrow {
+	position: relative;
+	top: -4vw;
+	left: 56vw;
+	border-left: .75vw solid var(--white);
+	border-bottom: .75vw solid var(--white);
+	width: 4vw; height: 4vw;
+	filter: drop-shadow(0px 0px 10px black);
+	transform: rotate(-135deg);
+	transition: 0.4s ease-in-out;
+}
+
+
+
+.cardArrow:hover{
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+*/}
+
+
+
+.cardPreviewCrop{
+	position: absolute;
+	width: 100%; height: 100%;
+	border-radius: 5vw;
+	overflow: hidden;
+	--limit: 80%;
+}
+
+.cardPreviewCrop:after{
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:inline-block;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) var(--limit)); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) var(--limit)); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) var(--limit)); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) var(--limit)); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) var(--limit)); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  transition: .4s ease-in-out;
+}
+
+
+.cardPreview{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.cardDescription{
+	/*visibility: hidden;*/
+	font: 1.75vw "Avenir";
+	color: var(--white);
+	position: relative;
+	top: -6vw;
+	left: 3vw;
+	width: 90%;
+	line-height: 1.6;
+	transition: .8s ease-in-out;
+	opacity: 0;
+}
+
+.custom-shape-divider-top-1667907070 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(10vw - 1px);
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+}
+
+.custom-shape-divider-top-1667907070 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 10vw;
+    transform: rotateY(180deg);
+
+}
+
+.custom-shape-divider-top-1667907070 .shape-fill {
+    fill: var(--cream);
+    z-index: -1;
+}
+
+
+
+.contact{
+	position: absolute;
+	left: 0;
+	top: calc(150vh + 280vw);;
+	width: 100%;
+	height: 800px;
+	background: var(--red);
+	display: flex;
+	justify-content: center;
+	padding-top: 200px;
+}
+
+.custom-shape-divider-top-1667938180 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1667938180 svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 148px;
+}
+
+.custom-shape-divider-top-1667938180 .shape-fill {
+    fill: var(--teal);
+}
+
+
+.feedback-input {
+  font-family: Avenir;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid var(--black);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid var(--white); }
+
+textarea {
+  height: 300px;
+  line-height: 150%;
+  resize:none;
+}
+
+[type="submit"] {
+  font-family: 'Avenir';
+  width: 100%;
+  background: var(--cream);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:var(--black);
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+[type="submit"]:hover {background: var(--black); color:var(--cream);}
+
+
+
+
+
+
+.contact h1{
+	position: absolute;
+	font: 6vh "Avenir";
+	color: var(--cream);
+	top: 15vh;
+
+}
+
+
+.contact h2{
+	position: absolute;
+	font: 6vh "Avenir";
+	color: var(--cream);
+	top: 100vh;
+}
+
+
+.contact span{
+	color: var(--black);
+	text-decoration: underline 2px;
+	text-underline-offset: 4px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+	opacity: 1;
+}
+
+
+
+
+::placeholder {
+  color: var(--cream);
+  opacity: .8;
+}
+
+
+
+
+
+
