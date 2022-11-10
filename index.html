@@ -123,15 +123,15 @@
 			<h1>To send me a quick message</h1>
 			
 			
-			<iframe style="display: none;" name="hiddenFormConfirm" id="hiddenFormConfirm"></iframe>
+			<iframe style="display: none;" onload="sendMessage()" name="hiddenFormConfirm" id="hiddenFormConfirm"></iframe>
 
 			<form action="https://docs.google.com/forms/d/e/1FAIpQLSeR60_UnnqZA0gYrQ6Jul85w3a5VNo0gIzwdpNEU_-rXHxtCQ/formResponse" method="post" target="hiddenFormConfirm">
 				
-				<input name="entry.759921605" class="feedback-input" placeholder="Name"/>
+				<input name="entry.759921605" id="nameText" class="feedback-input" placeholder="Name"/>
 				<input name="entry.43053163" class="feedback-input" placeholder="Email"/>
 				<textarea name="entry.383921891" class="feedback-input" placeholder="Comment"></textarea>
 				
-				<button type="Submit">Submit form</button>
+				<button type="Submit">Send</button>
 			
 			</form>
 

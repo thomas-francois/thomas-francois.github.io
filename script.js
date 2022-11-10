@@ -124,3 +124,13 @@ function copyEmail (element) {
 
 
 
+function sendMessage(){
+	var y = document.getElementsByClassName("feedback-input");
+		y[0].value="";
+		y[1].value="";
+		y[2].value="";
+	
+}
+
+
+
