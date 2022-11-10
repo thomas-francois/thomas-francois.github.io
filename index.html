@@ -6,6 +6,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script type="text/javascript">var submitted=false;</script>
 		<script defer src="script.js" type="text/javascript"></script>
 		
 		<style>
@@ -119,15 +121,17 @@
 
 
 			<h1>To send me a quick message</h1>
+			
+			
+			<iframe style="display: none;" name="hiddenFormConfirm" id="hiddenFormConfirm"></iframe>
 
-			<form name="MyForm" action="FormProcess.php">
+			<form action="https://docs.google.com/forms/d/e/1FAIpQLSeR60_UnnqZA0gYrQ6Jul85w3a5VNo0gIzwdpNEU_-rXHxtCQ/formResponse" method="post" target="hiddenFormConfirm">
 				
-				<input name="name" class="feedback-input" placeholder="Name"/>
-				<input class="feedback-input" placeholder="Email"/>
-				<textarea class="feedback-input" placeholder="Comment"></textarea>
+				<input name="entry.759921605" class="feedback-input" placeholder="Name"/>
+				<input name="entry.43053163" class="feedback-input" placeholder="Email"/>
+				<textarea name="entry.383921891" class="feedback-input" placeholder="Comment"></textarea>
 				
-				
-				<button id="loader" type="submit">Submit</button>
+				<button type="Submit">Submit form</button>
 			
 			</form>
 

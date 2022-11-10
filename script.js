@@ -123,34 +123,4 @@ function copyEmail (element) {
 }
 
 
-document.querySelector("form").addEventListener("submit", sendEmail);
-
-function sendEmail(e) {
-	e.preventDefault();
-	// Create the request object
-	let xhr = new XMLHttpRequest();
-
-	// monitor the ready state. We're looking for 4 - done. Ignore anything else
-	xhr.onreadystatechange = function(){
-		var text = xhr.responseText + xhr.status + xhr.readyState
-		// Check the response status.
-		if (xhr.readyState === 4) {
-			if (xhr.status === 200) {
-				document.getElementById("loader").innerHTML = xhr.responseText;
-			} else {
-				document.getElementById("loader").innerHTML = "Unable to send: Error "+xhr.status;
-			}
-		}
-	}
-
-	xhr.open('POST', 'FormProcess.php');
-	// set the mime type
-	
-	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	
-	// encode the data from the form and send it.
-	xhr.send('name=' + encodeURIComponent("Yayyoyay"));
-}
-
-
 
