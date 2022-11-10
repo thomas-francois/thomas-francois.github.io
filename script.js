@@ -36,6 +36,11 @@ function revealDescription(arrow) {
 }
 
 
+function scrollToCv(){
+	document.getElementById("CV").scrollIntoView({behavior: 'smooth'});
+}
+
+
 
 document.querySelectorAll(".cardArrow").forEach(item => {
 	item.addEventListener('mouseenter', event => {
