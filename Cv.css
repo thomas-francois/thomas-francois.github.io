@@ -1,0 +1,38 @@
+.CVJump{
+	position: relative;
+	top: -20vh;
+	width: 1vw;
+	visibility: hidden;
+}
+
+
+.CV{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+
+	top: 110vh; left: 10%;
+	width: 80vw; height: 115vw;
+	border-radius: 50px;
+	background: var(--cream);
+	box-shadow:  -20px 20px 60px #cec8b3, 20px -20px 60px #fffff3;
+	border: solid 1px #cec8b3;
+	overflow: hidden;
+
+}
+
+.sideBarCV{
+	position: relative;
+	top: 0;left: 0;
+	width: 35% ;height: 100%;
+	/*background: red;*/
+	/*outline: solid 2px #cec8b3;*/
+
+}
+
+.mainBodyCV{
+	position: relative;
+	width: 65% ;height: 100%;
+	/*background: blue;*/
+	outline: solid 2px #cec8b3;
+}

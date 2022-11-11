@@ -10,8 +10,6 @@
 
 
 body{
-/*	align-items: center;
-	justify-content: center;*/
 	display: flex;
 	flex-direction: collumn;
 	background: var(--cream);
@@ -22,7 +20,7 @@ body{
 
 .CVJump{
 	position: absolute;
-	top: 50.2vw;
+	top: 90vh;
 	width: 1vw;
 	visibility: hidden;
 }
