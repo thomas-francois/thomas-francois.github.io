@@ -1,4 +1,6 @@
 var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+
 
 function revealDescription(arrow) {
 	const currentPos = Number(arrow.style.top.slice(0, -2));
@@ -74,27 +76,35 @@ document.querySelectorAll(".cardArrow").forEach(item => {
 // 	}, false);
 
 
-var navBar = document.getElementsByClassName("navBarBackground")[0];
+var navBarBack = document.getElementsByClassName("navBarBackground")[0];
+var navBar = document.getElementsByClassName("navBar")[0];
 var scroll = document.getElementsByClassName("scrollArrow")[0];
 var logo = document.getElementsByClassName("logo")[0];
 
 
 window.addEventListener("scroll", function() {
 	if(this.pageYOffset > 50) {
-		navBar.style.opacity = "1";
+		navBarBack.style.opacity = ".75";
+		navBar.style.transform = "translate(0 ,-15px)";
+		navBarBack.style.transform = "translate(0 ,-30px)";
 	} else{
-		navBar.style.opacity = "0";
+		navBarBack.style.opacity = "0";
+		navBar.style.transform = "translate(0 ,0)";
+		navBarBack.style.transform = "translate(0 ,0)";
 	}
-	
-	if(this.pageYOffset > vh - 90) {
-		logo.style.display = 'flex';
-		logo.style.position = 'relative';
-		logo.style.width = 'auto';
-	} else{
-		logo.style.display = 'none';
-		logo.style.position = 'absolute';
+
+	if (vw > 700){
+		if(this.pageYOffset > vh - 90) {
+			logo.style.display = 'flex';
+			logo.style.position = 'relative';
+			logo.style.width = 'auto';
+			navBarBack.style.borderBottom = "0px"
+		} else{
+			logo.style.display = 'none';
+			logo.style.position = 'absolute';
+			navBarBack.style.borderBottom = "2px solid var(--red)"
+		}
 	}
-	
 
 
 	if (this.pageYOffset < 300) {

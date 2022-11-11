@@ -18,28 +18,6 @@ body{
 
 
 
-.CVJump{
-	position: absolute;
-	top: 90vh;
-	width: 1vw;
-	visibility: hidden;
-}
-
-
-.CV{
-	position: absolute;
-	display: flex;
-
-	top: 110vh; left: 10%;
-	width: 80vw; height: 115vw;
-	border-radius: 50px;
-	background: var(--cream);
-	box-shadow:  -20px 20px 60px #cec8b3,
-	             20px -20px 60px #fffff3;
-	outline: solid 1px #cec8b3;
-}
-
-
 .Cards{
 	position: absolute;
 	flex-direction: column;
@@ -232,6 +210,9 @@ body{
     fill: var(--teal);
 }
 
+form{
+	max-width: 80vw;
+}
 
 .feedback-input {
   font-family: Avenir;
@@ -245,6 +226,7 @@ body{
   padding: 13px;
   margin-bottom: 15px;
   width:100%;
+  max-width: 80vw;
   box-sizing: border-box;
   outline:0;
 }
@@ -263,6 +245,7 @@ textarea {
 [type="submit"] {
   font-family: 'Avenir';
   width: 100%;
+  max-width: 80vw;
   background: var(--cream);
   border-radius:5px;
   border:0;
