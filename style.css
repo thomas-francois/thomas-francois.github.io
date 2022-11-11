@@ -26,34 +26,34 @@ body{
 	height: 75px;
 	user-select: none;
 	z-index: 10;
+
+
 }
 
 
 .navBar a{
 	position: relative;
-	top: 20%;
-	left: 10%;
-	margin-right: 5vw;
-	margin-left: 2vw;
+	text-align: center;
+	top: 5vh;
+	left: 5vw;
+	width: 18vw;
 	text-decoration: none;
-	font: 2em "Avenir";
+	font: 3vw "Avenir";
 	color: var(--cream);
 	transition: all 0.1s ease-in-out;
+	outline: solid 2px;
 }
 
-
-.navBar img{
+.navBar h1{
 	position: relative;
-	left: 15%;
-	top: 10%;
-	margin-left: 5vw;
-	height: 80%; width: auto;
-	filter: invert(98%) sepia(7%) saturate(1154%) hue-rotate(322deg) brightness(102%) contrast(91%);
-	transition: all 0.1s ease-in-out;
+	top: 5vh;
+	font: 3vw "Lobster";
+	color: var(--cream);
+	outline: solid 2px;
 }
 
 
-.navBar a:hover,img:hover{
+.navBar a:hover,.navBar img:hover{
 	transform: scale(0.95);
 }
 
@@ -76,11 +76,62 @@ body{
 	position: absolute;
 	width: 100vw;
     height: 100vh;
-    background-image: url("assets/StockPhoto2.jpeg");
+    /*background-image: url("assets/StockPhoto2.jpeg");*/
+    background: #1a1325;
     background-position: center top;
 	background-size:cover;
 }
 
+.dividerPresentation{
+	position: absolute;
+	background: var(--teal);
+	top: 0;
+	left: 75vw;
+	height: 100vh;
+	width: 25vw;
+}
+
+.dividerPresentation img{
+	position: relative;
+	left: 5vw;
+	top: 68vh;
+	margin-right: 2vw;
+	height: 100px; width: auto;
+	filter: invert(98%) sepia(7%) saturate(1154%) hue-rotate(322deg) brightness(102%) contrast(91%);
+	transition: all 0.1s ease-in-out;
+}
+
+.PresentationPhoto{
+		position: absolute;
+		--size: 20vw;
+		left: -10vw;
+		top: 10vw;
+		background: var(--cream);
+		width: var(--size);
+		height: var(--size);
+		filter: drop-shadow(30px 30px 0px var(--red));
+		overflow: hidden;
+}
+
+.PresentationPhoto img{
+	position: absolute;
+	width: 100%; height: 100%;
+	filter: drop-shadow(0px 0px 10px #cec8b3);
+
+}
+
+.language{
+	position: relative;
+	top: 80vh;
+	left: -5vw;
+	color: var(--cream);
+	font: 2vw "Avenir";
+	outline: solid 2px;
+}
+
+i {
+	font: 2vw "Avenir";
+}
 
 .imageBackground{
 	position: absolute;
@@ -93,7 +144,7 @@ body{
 
 .presentation h1{
 	position: absolute;
-	top: 24vh; left: 18vw;
+	top: calc(50% - 12vh); left: 21vw;
 	font-family: "Lobster";
 	font-size: 4vw;
 	color: var(--white);
@@ -103,10 +154,10 @@ body{
 
 .presentation p{
 	position: absolute;
-	top: 35vh; left: 10vw;
-	font: 2.5vw "Avenir";
+	top: 50%; left: 10vw;
+	font: 2vw "Avenir";
 	color: var(--white);
-	width: 50vw;
+	width: 70vw;
 }
 
 
@@ -345,7 +396,7 @@ body{
     position: relative;
     display: block;
     width: calc(131% + 1.3px);
-    height: 148px;
+    height: 12vw;
 }
 
 
@@ -403,7 +454,7 @@ textarea {
 
 .contact h1{
 	position: absolute;
-	font: 6vh "Avenir";
+	font: 4vw "Avenir";
 	color: var(--cream);
 	top: 15vh;
 }
@@ -411,7 +462,7 @@ textarea {
 
 .contact h2{
 	position: absolute;
-	font: 6vh "Avenir";
+	font: 4vw "Avenir";
 	color: var(--cream);
 	top: 100vh;
 }
