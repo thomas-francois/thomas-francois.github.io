@@ -13,180 +13,11 @@ body{
 /*	align-items: center;
 	justify-content: center;*/
 	display: flex;
+	flex-direction: collumn;
 	background: var(--cream);
 	overflow-x: hidden;
 }
 
-
-.navBar{
-	position: fixed;
-	display: flex;
-	list-style-type: none;
-	width: 100%;
-	height: 75px;
-	user-select: none;
-	z-index: 10;
-
-
-}
-
-
-.navBar a{
-	position: relative;
-	text-align: center;
-	top: 5vh;
-	left: 5vw;
-	width: 18vw;
-	text-decoration: none;
-	font: 3vw "Avenir";
-	color: var(--cream);
-	transition: all 0.1s ease-in-out;
-	outline: solid 2px;
-}
-
-.navBar h1{
-	position: relative;
-	top: 5vh;
-	font: 3vw "Lobster";
-	color: var(--cream);
-	outline: solid 2px;
-}
-
-
-.navBar a:hover,.navBar img:hover{
-	transform: scale(0.95);
-}
-
-
-.navBarBackground{
-	position: fixed;
-	display: flex;
-	list-style-type: none;
-	background-color: var(--black);
-	width: 100%;
-	height: 75px;
-	z-index: 10;
-	user-select: none;
-	z-index: 9;
-	opacity: 0;
-}
-
-
-.presentation{
-	position: absolute;
-	width: 100vw;
-    height: 100vh;
-    /*background-image: url("assets/StockPhoto2.jpeg");*/
-    background: #1a1325;
-    background-position: center top;
-	background-size:cover;
-}
-
-.dividerPresentation{
-	position: absolute;
-	background: var(--teal);
-	top: 0;
-	left: 75vw;
-	height: 100vh;
-	width: 25vw;
-}
-
-.dividerPresentation img{
-	position: relative;
-	left: 5vw;
-	top: 68vh;
-	margin-right: 2vw;
-	height: 100px; width: auto;
-	filter: invert(98%) sepia(7%) saturate(1154%) hue-rotate(322deg) brightness(102%) contrast(91%);
-	transition: all 0.1s ease-in-out;
-}
-
-.PresentationPhoto{
-		position: absolute;
-		--size: 20vw;
-		left: -10vw;
-		top: 10vw;
-		background: var(--cream);
-		width: var(--size);
-		height: var(--size);
-		filter: drop-shadow(30px 30px 0px var(--red));
-		overflow: hidden;
-}
-
-.PresentationPhoto img{
-	position: absolute;
-	width: 100%; height: 100%;
-	filter: drop-shadow(0px 0px 10px #cec8b3);
-
-}
-
-.language{
-	position: relative;
-	top: 80vh;
-	left: -5vw;
-	color: var(--cream);
-	font: 2vw "Avenir";
-	outline: solid 2px;
-}
-
-i {
-	font: 2vw "Avenir";
-}
-
-.imageBackground{
-	position: absolute;
-	top: 0; left: 0;
-	height: 100%;
-	width: auto;
-	justify-self: center;
-}
-
-
-.presentation h1{
-	position: absolute;
-	top: calc(50% - 12vh); left: 21vw;
-	font-family: "Lobster";
-	font-size: 4vw;
-	color: var(--white);
-	transition: 0.4s ease;
-}
-
-
-.presentation p{
-	position: absolute;
-	top: 50%; left: 10vw;
-	font: 2vw "Avenir";
-	color: var(--white);
-	width: 70vw;
-}
-
-
-.presentation span{
-	color: var(--red);
-}
-
-
-.scrollIndicator{
-	position: relative;
-	top: 85vh;
-	left: 47.5vw;
-	border-left: 4px solid var(--white);
-	border-bottom: 4px solid var(--white);
-	width: 4vw; height: 4vw;
-	filter: drop-shadow(0px 0px 5px black);
-	transition: .5s ease-in-out;
-	animation: MoveUpDown 3s linear infinite;
-}
-
-
-@keyframes MoveUpDown {
-  0%, 100% {
-    transform: translateY(0) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(-45deg);
-  }
-}
 
 
 .CVJump{
@@ -208,12 +39,11 @@ i {
 	box-shadow:  -20px 20px 60px #cec8b3,
 	             20px -20px 60px #fffff3;
 	outline: solid 1px #cec8b3;
-	z-index: 1;
 }
 
 
 .Cards{
-	position: relative;
+	position: absolute;
 	flex-direction: column;
 	left: 0;
 	top: calc(125vh + 115vw);;

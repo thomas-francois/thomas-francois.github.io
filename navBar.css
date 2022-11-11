@@ -1,0 +1,135 @@
+/*.navBar{
+	position: fixed;
+	display: flex;
+	list-style-type: none;
+	width: 100%;
+	height: 75px;
+	user-select: none;
+	z-index: 10;
+}
+
+
+.navBar a{
+	position: relative;
+	text-align: center;
+	top: 5vh;
+	left: 5vw;
+	width: 18vw;
+	text-decoration: none;
+	font: 3vw "Avenir";
+	color: var(--cream);
+	transition: all 0.1s ease-in-out;
+	outline: solid 2px;
+}
+
+.navBar h1{
+	position: relative;
+	top: 5vh;
+	font: 3vw "Lobster";
+	color: var(--cream);
+	outline: solid 2px;
+}
+
+
+.navBar a:hover,.navBar img:hover{
+	transform: scale(0.95);
+}
+
+
+.navBarBackground{
+	position: fixed;
+	display: flex;
+	list-style-type: none;
+	background-color: var(--black);
+	width: 100%;
+	height: 75px;
+	z-index: 10;
+	user-select: none;
+	z-index: 9;
+	opacity: 0;
+}
+
+
+.presentation{
+	position: absolute;
+	width: 100vw;
+    height: 100vh;
+    background-image: url("assets/StockPhoto2.jpeg");
+    background: #1a1325;
+    background-position: center top;
+	background-size:cover;
+}*/
+
+.nav{
+	position: fixed;
+	top: 0; ,left: 0;
+	width: 100%; height: 100px;
+	font-family: "Avenir";
+	z-index: 100;
+}
+
+
+.navBarBackground{
+	position: fixed;
+	background-color: var(--black);
+	width: 100%;
+	height: 90px;
+	opacity: 0;
+}
+
+
+.navBar{
+	display: flex;
+	flex-direction: row;
+	background: "";
+	width: 100%; height: 100%;
+	text-align: center;
+	align-items: center;
+}
+
+.navBar a{
+	position: relative;
+	width: 25vw;
+	font-size: 3vw;
+	text-decoration: none;
+	color: white;
+	transition: all 0.1s ease-in-out;
+}
+
+ .navBar h1{
+ 	position: absolute;
+ 	display: none;
+ 	top: 0;
+ 	width: 100%;
+ 	font-family: "Avenir";
+ 	color: white;
+}
+
+.navBar a:hover{
+	transform: scale(0.95);
+}
+
+
+ @media (max-width: 700px){
+ 	.nav{
+ 		height: 80px;
+ 	}
+
+ 	.navBar a{
+ 		width: auto;
+ 		font-size: 5vw;
+ 		margin-right: 5vw;
+ 		left: 5vw;
+ 	}	
+
+  	.navBar h1{
+ 		display: none;
+ 	}	
+
+ }
+
+
+
+
+
+

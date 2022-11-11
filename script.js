@@ -1,3 +1,5 @@
+var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
 function revealDescription(arrow) {
 	const currentPos = Number(arrow.style.top.slice(0, -2));
 	var siblings = arrow.parentNode.childNodes;
@@ -64,27 +66,37 @@ document.querySelectorAll(".cardArrow").forEach(item => {
 
 
 
-document.addEventListener('DOMContentLoaded', function(){
-		const title = document.getElementById("Title");
-		// title.style.font = "8vw";
-		// title.style.setProperty("font-size" ,"8vw");
-		title.style.transform = "scale(2)";
-
-
-	}, false);
+// document.addEventListener('DOMContentLoaded', function(){
+// 		const title = document.getElementById("Title");
+// 		// title.style.font = "8vw";
+// 		// title.style.setProperty("font-size" ,"8vw");
+// 		title.style.transform = "scale(2)";
+// 	}, false);
 
 
 var navBar = document.getElementsByClassName("navBarBackground")[0];
-var scroll = document.getElementsByClassName("scrollIndicator")[0];
+var scroll = document.getElementsByClassName("scrollArrow")[0];
+var logo = document.getElementsByClassName("logo")[0];
 
 
 window.addEventListener("scroll", function() {
-	if(this.pageYOffset < 500) {
-		navBar.style.opacity = this.pageYOffset / 500;
-	} else{
+	if(this.pageYOffset > 50) {
 		navBar.style.opacity = "1";
+	} else{
+		navBar.style.opacity = "0";
 	}
 	
+	if(this.pageYOffset > vh - 90) {
+		logo.style.display = 'flex';
+		logo.style.position = 'relative';
+		logo.style.width = 'auto';
+	} else{
+		logo.style.display = 'none';
+		logo.style.position = 'absolute';
+	}
+	
+
+
 	if (this.pageYOffset < 300) {
 		scroll.style.opacity = '1';
 	} else {
