@@ -46,7 +46,7 @@
 	top: 18vh; right: 10vw;
 	width: 20vw; height: 20vw;
 	background: var(--cream);
-	/*background-image: url("./assets/Portrait4.png");*/
+	background-image: url("./assets/Portrait4.png");
 	background-size: 100%;
 	background-position: bottom;
 	background-repeat: no-repeat;
