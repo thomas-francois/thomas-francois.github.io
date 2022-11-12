@@ -49,7 +49,6 @@ function Point() {
     	if (Math.abs(this.ySpeed) >= this.yBaseSpeed + 0.05) {
     		this.ySpeed = this.ySpeed * 0.97;
     	}
-    	console.log(this.xSpeed);
 
     	
 
@@ -73,8 +72,6 @@ function Point() {
 }
 
 
-
-
 function setupPoints() {
 	space.width = canvasContainer.offsetWidth;
 	space.height = canvasContainer.offsetHeight;
@@ -90,7 +87,6 @@ function setupPoints() {
         points[i].show();
     }
 }
-
 
 
 function updatePoints() {

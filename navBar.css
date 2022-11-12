@@ -71,7 +71,7 @@
 
 .navBarBackground{
 	position: fixed;
-	background-color: var(--red);
+	background-color: var(--black);
 /*	border-bottom: 2px solid var(--red);
 */	width: 100%;
 	height: 100px;
