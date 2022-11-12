@@ -8,6 +8,7 @@ var navBar = document.getElementsByClassName("navBar")[0];
 var scroll = document.getElementsByClassName("scrollArrow")[0];
 var logo = document.getElementsByClassName("logo")[0];
 const btn = document.getElementById("button");
+var links = document.getElementsByClassName("link");
 
 const space = document.getElementById('canvas');
 const canvasContainer = document.getElementsByClassName("homepageMain")[0];
@@ -90,29 +91,51 @@ document.querySelectorAll(".cardArrow").forEach(item => {
 
 window.addEventListener("scroll", function() {
 	scrollAmount = this.pageYOffset;
+
 	if(this.pageYOffset > 30) {
-		navBarBack.style.opacity = "1";
 		navBar.style.transform = "translate(0 ,-15px)";
 		navBarBack.style.transform = "translate(0 ,-30px)";
+		navBarBack.style.opacity = "1";
 	} else{
-		navBarBack.style.opacity = "0";
 		navBar.style.transform = "translate(0 ,0)";
 		navBarBack.style.transform = "translate(0 ,0)";
+		navBarBack.style.opacity = "0"
 	}
 
-	if (vw > 700){
-		if(this.pageYOffset > vh - 90) {
-			logo.style.display = 'flex';
-			logo.style.position = 'relative';
-			logo.style.width = 'auto';
-			logo.style.marginLeft = "5vw"
-			logo.style.opacity = '1';
-		} else{
-			logo.style.display = 'none';
-			logo.style.position = 'absolute';
+	if(vw > 700){
+		if(this.pageYOffset > 30) {
+			flexAmmount = ".2";
+			for (var i = 0.; i < links.length; i++) {
+				links[i].style.flex = flexAmmount;
+			}
+
+			logo.style.display = 'initial';
+			
+			setTimeout(() => {
+				logo.style.opacity = '1';
+				logo.style.fontSize = "4.5vw";
+				logo.style.flex = "0.2";
+
+			} ,1);
+		} else {
+			if (logo.style.opacity === "1") {
+				logo.style.opacity = '0';
+				logo.style.fontSize = "1px";
+				logo.style.flex = "0";
+				flexAmmount = ".5";
+
+
+				setTimeout(() => {
+					logo.style.display = 'none';
+				} ,390);
+
+				
+				for (var i = 0.; i < links.length; i++) {
+					links[i].style.flex = flexAmmount;
+				}
+			}
 		}
 	}
-
 
 	if (this.pageYOffset < 300) {
 		scroll.style.opacity = '1';

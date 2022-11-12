@@ -1,6 +1,6 @@
 .CVJump{
-	position: relative;
-	top: -20vh;
+	position: absolute;
+	top: -18vh;
 	width: 1vw;
 	visibility: hidden;
 }
