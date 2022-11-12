@@ -211,6 +211,7 @@ body{
 }
 
 form{
+	position: relative;
 	max-width: 80vw;
 }
 
@@ -264,7 +265,7 @@ textarea {
 
 
 .contact h1{
-	position: absolute;
+	position: relative;
 	font: 4vw "Avenir";
 	color: var(--cream);
 	top: 15vh;
@@ -272,7 +273,7 @@ textarea {
 
 
 .contact h2{
-	position: absolute;
+	position: relative;
 	font: 4vw "Avenir";
 	color: var(--cream);
 	top: 100vh;

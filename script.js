@@ -1,6 +1,8 @@
 var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
+var scrollAmount = 0;
+
 var navBarBack = document.getElementsByClassName("navBarBackground")[0];
 var navBar = document.getElementsByClassName("navBar")[0];
 var scroll = document.getElementsByClassName("scrollArrow")[0];
@@ -87,6 +89,7 @@ document.querySelectorAll(".cardArrow").forEach(item => {
 
 
 window.addEventListener("scroll", function() {
+	scrollAmount = this.pageYOffset;
 	if(this.pageYOffset > 30) {
 		navBarBack.style.opacity = "1";
 		navBar.style.transform = "translate(0 ,-15px)";
@@ -102,11 +105,11 @@ window.addEventListener("scroll", function() {
 			logo.style.display = 'flex';
 			logo.style.position = 'relative';
 			logo.style.width = 'auto';
-			navBarBack.style.borderBottom = "0px"
+			logo.style.marginLeft = "5vw"
+			logo.style.opacity = '1';
 		} else{
 			logo.style.display = 'none';
 			logo.style.position = 'absolute';
-			navBarBack.style.borderBottom = "0px solid var(--red)"
 		}
 	}
 
@@ -220,7 +223,7 @@ function Point() {
 
 
 function setupPoints() {
-	onmousemove = function(e){mouse.x = e.clientX; mouse.y = e.clientY;}
+	onmousemove = function(e){mouse.x = e.clientX; mouse.y = e.clientY + scrollAmount;}
 	
 	space.width = canvasContainer.offsetWidth;
 	space.height = canvasContainer.offsetHeight;
