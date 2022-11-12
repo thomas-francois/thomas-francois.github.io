@@ -104,8 +104,9 @@
  	display: none;
  	top: 0;
  	width: 100%;
- 	font-family: "Avenir";
- 	color: white;
+ 	font-family: "Abril";
+ 	font-size: 4.5vw;
+ 	color: var(--teal);
 }
 
 .navBar a:hover{

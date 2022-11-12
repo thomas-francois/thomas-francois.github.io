@@ -12,7 +12,9 @@
 		<link rel="stylesheet" type="text/css" href="Cv.css">
 		
 		<script defer src="script.js" type="text/javascript"></script>
-		
+		<script defer src="canvas.js" type="text/javascript"></script>
+
+
 		<script type="text/javascript">var submitted=false;</script>
 		<script src="https://kit.fontawesome.com/9c0cbfc11e.js" crossorigin="anonymous"></script>
 
@@ -22,7 +24,9 @@
 				font-family: LeagueSpartan; src: url('fonts/LeagueSpartan-Bold.ttf');}
 			@font-face {
 				font-family: Lobster; src: url('fonts/LobsterTwo-Bold.ttf');}
-		} </style>
+			@font-face {
+				font-family: Abril; src: url('fonts/AbrilFatface-Regular.ttf');}
+		</style>
 
 
 		<title>CV Portfolio</title>
@@ -33,6 +37,7 @@
 
 		<section id="Home" class="homepage">
 			<div class="homepageMain">
+				<canvas id="canvas" class="canvas" ></canvas>
 				<h1 id="Title">Hi, I<span>'</span>m <span>Thomas</span></h1>
 				<p><span>Computer science</span> student at university<br>Motivated and curious, I like to solve <span>challlenges</span></p>
 				<div class="scrollArrow" onclick="scrollToCv()"></div>
@@ -55,7 +60,7 @@
 			<div class="navBar">
 				<a href="#Home">About me</a>
 				<a href="#Cv">CV</a>
-				<h1 class="logo">Thomas François</h1>
+				<h1 class="logo">Tf</h1>
 				<a href="#PROJETS">Projects</a>
 				<a href="#CONTACT">Contact me</a>
 			</div>
