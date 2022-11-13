@@ -294,5 +294,49 @@ textarea {
   opacity: .8;
 }
 
+@media (max-width: 700px){
+	.contact h1{
+		font: 6vw "Avenir";
+	}
+
+	.cardNum{
+		font: 15vw "LeagueSpartan";
+	}
+
+	.projectCard{
+		left: 5vw;
+		width: 90vw; height: 60vw;
+	}
+
+	.cardTitle{
+		font: 9vw "Avenir";
+		top: 28vw;
+	}
+
+	.cardSubtitle{
+		font: 3vw "Avenir";
+		top: 28vw
+	}
+
+	.cardArrow{
+		top: -4vw;
+		left: 86vw;
+	}
+	.cardDescription{
+		font: 3vw "Avenir";
+	}
+
+	.contact{
+		top: calc(150vh + 310vw);
+		height: 700px;
+	}
+
+	.contact h2{
+		top: 88vh;
+	}
+}
+
+
+
 
 

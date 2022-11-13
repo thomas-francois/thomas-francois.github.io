@@ -15,8 +15,9 @@
 	width: 80vw; height: 115vw;
 	border-radius: 50px;
 	background: var(--cream);
-	box-shadow:  -20px 20px 60px #cec8b3, 20px -20px 60px #fffff3;
-	border: solid 1px #cec8b3;
+/*	box-shadow:  -20px 20px 60px #cec8b3, 20px -20px 60px #fffff3;*/
+/*	border: solid 1px #cec8b3;*/
+	box-shadow: 0px 0px 60px #11111190;
 	overflow: hidden;
 	background-image: url("./assets/CV.png");
 	background-size: 100%;
@@ -26,6 +27,7 @@
 	.CV{
 		left: 5vw;
 		width: 90vw; height: 128vw;
+		border-radius: 25px;
 	}
 
 }

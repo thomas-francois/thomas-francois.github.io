@@ -36,7 +36,13 @@ function revealDescription(arrow) {
 				sibling.style.setProperty("--limit" ,"0%");
 			}
 			if (sibling.className == "cardTitle" || sibling.className == "cardSubtitle"){
-				sibling.style.transform = "translate(0 ,-20vw)";
+				if (vw > 700){
+					sibling.style.transform = "translate(0 ,-20vw)";
+				} else {
+					sibling.style.transform = "translate(0 ,-30vw)";
+				}
+
+				
 			}
 			if (sibling.className == "cardDescription"){
 				sibling.style.opacity = "1";
