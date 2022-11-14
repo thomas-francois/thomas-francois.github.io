@@ -1,5 +1,5 @@
-var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
 var scrollAmount = 0;
 
@@ -303,6 +303,13 @@ window.onresize = function() {
         h: canvasContainer.offsetHeight + 20,
     };
 
+	var newVh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+	if (vh === newVh) {
+		vh = newVh;
+	} else {
+		return;
+	}
+
     var lastPoints = points.length;
     pointsNbr = screen.h * screen.w / 2000
     
@@ -320,7 +327,7 @@ window.onresize = function() {
         p.relocate();
     });
 
-    console.log(points.length);
+    // console.log(points.length);
 };
 
 
