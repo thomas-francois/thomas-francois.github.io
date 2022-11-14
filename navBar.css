@@ -65,6 +65,7 @@
  @media (max-width: 700px){
  	.nav ,.navBar ,.navBarBackground{
  		height: 80px;
+ 		overflow-x: hidden;
  	}
 
 
