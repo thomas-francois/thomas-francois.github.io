@@ -16,6 +16,7 @@ body{
 	flex-direction: collumn;
 	background: var(--cream);
 	overflow-x: hidden;
+/*	background-image: url("scrible.png");*/
 }
 
 
@@ -28,7 +29,6 @@ body{
 	width: 100%;
 	background: var(--teal);
 	padding-bottom: 50vh;
-	/*background: linear-gradient(to bottom, var(--cream) 0%,var(--red) 100%)*/
 }
 
 
@@ -177,129 +177,8 @@ body{
 }
 
 
-.contact{
-	position: absolute;
-	left: 0;
-	top: calc(150vh + 280vw);;
-	width: 100%;
-	height: 800px;
-	background: var(--red);
-	display: flex;
-	justify-content: center;
-	padding-top: 200px;
-}
-
-
-.custom-shape-divider-top-1667938180 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-
-.custom-shape-divider-top-1667938180 svg {
-    position: relative;
-    display: block;
-    width: calc(131% + 1.3px);
-    height: 12vw;
-}
-
-
-.custom-shape-divider-top-1667938180 .shape-fill {
-    fill: var(--teal);
-}
-
-form{
-	max-width: 80vw;
-}
-
-.feedback-input {
-  font-family: Avenir;
-  font-weight:500;
-  font-size: 18px;
-  border-radius: 5px;
-  line-height: 22px;
-  background-color: transparent;
-  border:2px solid var(--black);
-  transition: all 0.3s;
-  padding: 13px;
-  margin-bottom: 15px;
-  width:100%;
-  max-width: 80vw;
-  box-sizing: border-box;
-  outline:0;
-}
-
-
-.feedback-input:focus { border:2px solid var(--white); }
-
-
-textarea {
-  height: 300px;
-  line-height: 150%;
-  resize:none;
-}
-
-
-[type="submit"] {
-  font-family: 'Avenir';
-  width: 100%;
-  max-width: 80vw;
-  background: var(--cream);
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:var(--black);
-  font-size:24px;
-  padding-top:10px;
-  padding-bottom:10px;
-  transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
-}
-
-
-[type="submit"]:hover {background: var(--black); color:var(--cream);}
-
-
-.contact h1{
-	position: absolute;
-	font: 4vw "Avenir";
-	color: var(--cream);
-	top: 15vh;
-}
-
-
-.contact h2{
-	position: absolute;
-	font: 4vw "Avenir";
-	color: var(--cream);
-	top: 100vh;
-}
-
-
-.contact span{
-	color: var(--black);
-	text-decoration: underline 2px;
-	text-underline-offset: 4px;
-	cursor: pointer;
-	transition: 0.2s ease-in-out;
-	opacity: 1;
-}
-
-
-::placeholder {
-  color: var(--cream);
-  opacity: .8;
-}
 
 @media (max-width: 700px){
-	.contact h1{
-		font: 6vw "Avenir";
-	}
 
 	.cardNum{
 		font: 15vw "LeagueSpartan";
@@ -326,15 +205,6 @@ textarea {
 	}
 	.cardDescription{
 		font: 3vw "Avenir";
-	}
-
-	.contact{
-		top: calc(150vh + 310vw);
-		height: 700px;
-	}
-
-	.contact h2{
-		top: 88vh;
 	}
 }
 

@@ -243,7 +243,7 @@ function Point() {
 
     this.show = function(){
     	spaceCtx.beginPath();
-    	spaceCtx.fillStyle = "rgba(255, 255, 255 ,.05)";
+    	spaceCtx.fillStyle = "rgba(255, 255, 255 ,.02)";
     	spaceCtx.arc(this.x ,this.y ,this.rad ,0 ,Math.PI * 2);
     	spaceCtx.fill();
 
