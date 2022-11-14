@@ -17,7 +17,7 @@ const spaceCtx = space.getContext('2d');
 
 let screen;
 let points;
-let pointsNbr = 300;
+var pointsNbr;
 let mouse = {x: 0 ,y: 0}
 const friction = 0.7;
 const maxRayon = 100;
@@ -69,7 +69,7 @@ function revealDescription(arrow) {
 
 
 function scrollToCv(){
-	document.getElementById("CV").scrollIntoView({behavior: 'smooth'});
+	document.getElementById("Cv").scrollIntoView({behavior: 'smooth'});
 }
 
 
@@ -243,10 +243,15 @@ function Point() {
 
     this.show = function(){
     	spaceCtx.beginPath();
-    	spaceCtx.fillStyle = "rgba(255, 255, 255 ,.03)";
+    	spaceCtx.fillStyle = "rgba(255, 255, 255 ,.05)";
     	spaceCtx.arc(this.x ,this.y ,this.rad ,0 ,Math.PI * 2);
     	spaceCtx.fill();
 
+    };
+
+    this.relocate = function(){
+    	this.x = Math.random() * screen.w;
+    	this.y = Math.random() * screen.h;
     };
 }
 
@@ -262,8 +267,9 @@ function setupPoints() {
     };
     window.cancelAnimationFrame(updatePoints);
 
+    pointsNbr = screen.h * screen.w / 2000;
     points = [];
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < pointsNbr; i++) {
         points[i] = new Point();
         points[i].show();
     }
@@ -280,8 +286,9 @@ function updatePoints() {
         p.show();
         p.move();
     });
-
     window.requestAnimationFrame(updatePoints);
+
+    
 }
 
 
@@ -289,7 +296,31 @@ setupPoints();
 
 
 window.onresize = function() {
-    setupPoints();
+    space.width = canvasContainer.offsetWidth;
+	space.height = canvasContainer.offsetHeight;
+    screen = {
+        w: canvasContainer.offsetWidth + 20,
+        h: canvasContainer.offsetHeight + 20,
+    };
+
+    var lastPoints = points.length;
+    pointsNbr = screen.h * screen.w / 2000
+    
+    if (lastPoints < pointsNbr){
+	    for (let i = 0; i < pointsNbr - lastPoints; i++) {
+	        points.push(new Point());
+	    }
+    } else if (lastPoints > pointsNbr){
+	    for (let i = 0; i < lastPoints - pointsNbr; i++) {
+	        points.pop();
+	    }
+    }
+
+    points.forEach(function (p) {
+        p.relocate();
+    });
+
+    console.log(points.length);
 };
 
 
