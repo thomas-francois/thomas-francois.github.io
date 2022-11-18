@@ -37,7 +37,7 @@ function revealDescription(arrow) {
 			}
 			if (sibling.className == "cardTitle" || sibling.className == "cardSubtitle"){
 				if (vw > 700){
-					sibling.style.transform = "translate(0 ,-20vw)";
+					sibling.style.transform = "translate(0 ,-21vw)";
 				} else {
 					sibling.style.transform = "translate(0 ,-30vw)";
 				}

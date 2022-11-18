@@ -76,7 +76,7 @@ body{
 	font: 2vw "Avenir";
 	color: var(--white);
 	position: relative;
-	top: 18vw;
+	top: 19vw;
 	left: 3vw;
 	filter: drop-shadow(0px 0px 20px black);
 	user-select: none;
