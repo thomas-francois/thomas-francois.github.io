@@ -73,6 +73,17 @@ function scrollToCv(){
 }
 
 
+function changeLang(){
+	var lang = document.getElementById("languageIndicator");
+	if (lang.innerText == "English"){
+		lang.innerText = "French";
+	} else if (lang.innerText == "French") {
+		lang.innerText = "English";
+	}
+	
+}
+
+
 document.querySelectorAll(".cardArrow").forEach(item => {
 	item.addEventListener('mouseenter', event => {
 		const arrow = document.getElementById(event.srcElement.id);

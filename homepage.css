@@ -39,6 +39,7 @@
 	background: var(--teal);
 	display: flex;
 	flex-direction: collumn;
+	user-select: none;
 }
 
 
@@ -101,13 +102,18 @@
   }
 }
 
-
-
-.homepageSecond img{
+.homepageSecond .logoWebsite{
 	position: relative;
 	left: 3vw;
 	top: 68vh;
 	margin-right: 3vw;
+	height: 8vw; width: 8vw;
+}
+
+
+.homepageSecond img{
+	position: relative;
+	left: 0; top: 0;
 	height: 8vw; width: auto;
 	filter: invert(98%) sepia(7%) saturate(1154%) hue-rotate(322deg) brightness(102%) contrast(91%);
 	transition: all 0.2s ease-in-out;
@@ -124,6 +130,7 @@
 	font-family: "Avenir";
 	font-size: 2vw;
 	color: var(--cream);
+	cursor: pointer;
 }
 
 .fa-globe{
@@ -187,7 +194,7 @@ span{
 		left: calc(50% - 2vw);
 	}
 
-	.language ,.homepageSecond img{
+	.language ,.homepageSecond .logoWebsite{
 		display: none;
 	}
 

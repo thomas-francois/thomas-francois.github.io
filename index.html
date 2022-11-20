@@ -15,7 +15,6 @@
 		<link rel="stylesheet" type="text/css" href="Cv.css">
 		<link rel="stylesheet" type="text/css" href="contact.css">
 		
-		<!-- <script defer src="canvas.js" type="text/javascript"></script> -->
 		<script defer src="script.js" type="text/javascript"></script>
 		
 
@@ -51,15 +50,16 @@
 				<div class="homepagePhotoContainer"></div>
 				<div class="photoOutline"></div>
 				
-				<a href="https://linkedin.com/in/Thomas-FRANC0IS" target="_blank" rel="noopener noreferrer">
-					<img href="" src="assets/Linkedin.png" alt="Linkedin logo"><br>
+				<a class="logoWebsite" href="https://linkedin.com/in/Thomas-FRANC0IS" target="_blank" rel="noopener noreferrer">
+					<img src="assets/Linkedin.png" alt="Linkedin logo"><br>
 				</a>
-				<a href="https://github.com/thomas-francois" target="_blank" rel="noopener noreferrer" >
-	 				<img href="" src="assets/Github.png" alt="Github logo">
+				
+				<a class="logoWebsite" href="https://github.com/thomas-francois" target="_blank" rel="noopener noreferrer" >
+	 				<img src="assets/Github.png" alt="Github logo">
 	 			</a>
 
-	 			<i class="language fa-solid fa-globe"></i>
-	 			<a class="language">English</a>
+	 			<i class="language fa-solid fa-globe" onclick="changeLang()"></i>
+	 			<a class="language" id="languageIndicator" onclick="changeLang()">English</a>
 			</div>
 
 			<div class="scrollArrow" onclick="scrollToCv()"></div>
